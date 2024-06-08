@@ -1,9 +1,10 @@
-# Change Log
+# Changelog
 
-All notable changes to the "folder-scopes" extension will be documented in this file.
+## [1.0]
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### Added
 
-## [Unreleased]
-
-- Initial release
+- Creating scopes
+- Managing scopes
+- Scoping a folder
+- Hiding folders and files

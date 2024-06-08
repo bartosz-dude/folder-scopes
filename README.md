@@ -1,71 +1,48 @@
-# folder-scopes README
+# Folder Scopes
 
-This is the README for your extension "folder-scopes". After writing up a brief description, we recommend including the following sections.
+Scope Visual Studio Code file tree in a similar way to IntelliJ IDEA Scopes.
+
+## Overview
+
+- Create scopes to show ony specific folder
+![Create a scope and scope a folder](images/createScope.gif)
+
+- Hide unwanted files and folders in a scope
+![Hide files and folders](images/hideItems.gif)
+
+- Reveal again files and folders
+![Show hidden files and folders](images/showHidden.gif)
+
+- Switch between multiple scopes
+![Switch between multiple scopes](images/switchScopes.gif)
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Create scopes
+- Scope file view to a specific folder
+- Hide files and folders in a scope
+- `Root` scope allows you to always see unscoped file view
+- Each workspace folder has separate scope
+- Saves defined scopes in `settings.json` in `.vscode` to work with source control
 
-For example if there is an image subfolder under your extension project workspace:
+## How to use
 
-\!\[feature X\]\(images/feature-x.png\)
+By default a workspace has a `Root` scope, you can't hide files and scope folder in it. To do so you must create a new scope with `Create Scope` command, it will automatically switch to the newly created scope.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+To scope a folder you open context menu of a folder in explorer and choose `Scope Folder`. To remove folder scoping in a scope you use `Unscope` command. You can't scope `.vscode` and workspace folders.
 
-## Requirements
+To hide a file or a folder you open context menu of target element and choose `Hide File` or `Hide Folder` respectively. To remove hiding you use `Reveal Hidden Files` command.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Switching between scopes can be done with either `Switch Scope` command or by clicking current scope name on the status bar.
 
-## Extension Settings
+Renaming scope can be done with `Rename Scope` command and deleting with `Delete Scope`.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Quirks
 
-For example:
+Folder Scopes uses `"files.exclude"` setting saved in `.vscode` to work, so when using source control make sure that either you are commting empty `"files.exclude"` or all collaborators have this extension installed. Folder Scopes will maintain selected scope of a user independent of `"files.exclude"`.
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+File with its path will show up in file explorer as long as its editor is visible, even when the file is hidden.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- `"file.exclude"` setting in `.vscode` folder will be overwritten

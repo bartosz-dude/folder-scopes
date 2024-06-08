@@ -2,8 +2,21 @@
 	"name": "folder-scopes",
 	"publisher": "bartosz-dude",
 	"displayName": "Folder Scopes",
-	"description": "Allows to scope folders to only show their content",
-	"version": "0.0.1",
+	"description": "Create scopes to show only the folder you want and hide irrelevant files to the scope in it",
+	"version": "1.0.0",
+	"funding": {
+		"type": "ko-fi",
+		"url": "https://ko-fi.com/bartoszdude"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bartosz-dude/folder-scopes"
+	},
+	"pricing": "Free",
+	"author": {
+		"name": "bartosz-dude",
+		"url": "https://dudzinski.dev/"
+	},
 	"engines": {
 		"vscode": "^1.90.0"
 	},
@@ -11,7 +24,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"*"
+		"onStartupFinished"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -22,7 +35,7 @@
 			},
 			{
 				"command": "folder-scopes.selectScope",
-				"title": "Select Scope",
+				"title": "Switch Scope",
 				"category": "Folder Scopes"
 			},
 			{
