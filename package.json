@@ -17,6 +17,7 @@
 		"name": "bartosz-dude",
 		"url": "https://dudzinski.dev/"
 	},
+	"icon": "images/logo.png",
 	"engines": {
 		"vscode": "^1.90.0"
 	},
