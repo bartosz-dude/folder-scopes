@@ -7,14 +7,26 @@ import { renameScopeCommand } from "./commands/renameScope"
 import { scopeFolderCommand } from "./commands/scopeFolder"
 import { selectScopeCommand } from "./commands/selectScope"
 import { unscopeCommand } from "./commands/unscope"
-import {
-	createScope,
-	getScopeConfig,
-	loadFromSettings,
-	scopeExist,
-	setScopeConfig,
-	updateFileExcluding,
-} from "./scope"
+import { loadFromSettings } from "./scoping/loadFromSettings"
+import { updateFileExcluding } from "./scoping/updateFileExcluding"
+import { setScopeConfig } from "./scoping/setScopeConfig"
+import { getScopeConfig } from "./scoping/getScopeConfig"
+import { scopeExist } from "./scoping/scopeExist"
+import { createScope } from "./scoping/createScope"
+
+export interface FileScopesWorkspaceState {
+	user: {
+		currentScope: string
+	}
+	scopes: {
+		[scopeName: string]: {
+			[workspaceFolder: string]: {
+				folderPath?: string
+				excludedFilePaths?: string[]
+			}
+		}
+	}
+}
 
 export const RootScope = "Root"
 

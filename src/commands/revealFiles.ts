@@ -1,6 +1,8 @@
 import * as vscode from "vscode"
 import { RootScope } from "../extension"
-import { getScopeConfig, revealFiles, saveToSettings } from "../scope"
+import { saveToSettings } from "../scoping/saveToSettings"
+import { getScopeConfig } from "../scoping/getScopeConfig"
+import { revealFiles } from "../scoping/revealFiles"
 
 export const unscopeCommand = (context: vscode.ExtensionContext) =>
 	vscode.commands.registerCommand(

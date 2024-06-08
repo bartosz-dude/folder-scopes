@@ -1,11 +1,9 @@
 import * as vscode from "vscode"
 import { RootScope } from "../extension"
-import {
-	getScopeConfig,
-	parseScopeUri,
-	hideFile,
-	saveToSettings,
-} from "../scope"
+import { saveToSettings } from "../scoping/saveToSettings"
+import { getScopeConfig } from "../scoping/getScopeConfig"
+import { parseScopeUri } from "../scoping/parseScopeUri"
+import { hideFile } from "../scoping/hideFile"
 
 export const hideFolderCommand = (context: vscode.ExtensionContext) =>
 	vscode.commands.registerCommand(

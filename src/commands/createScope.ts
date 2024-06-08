@@ -1,5 +1,8 @@
 import * as vscode from "vscode"
-import { scopeExist, createScope, selectScope, saveToSettings } from "../scope"
+import { saveToSettings } from "../scoping/saveToSettings"
+import { selectScope } from "../scoping/selectScope"
+import { scopeExist } from "../scoping/scopeExist"
+import { createScope } from "../scoping/createScope"
 
 export const createScopeCommand = (
 	context: vscode.ExtensionContext,

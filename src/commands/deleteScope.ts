@@ -1,11 +1,9 @@
 import * as vscode from "vscode"
-import {
-	deleteScope,
-	getScopeConfig,
-	getScopes,
-	saveToSettings,
-	selectScope,
-} from "../scope"
+import { saveToSettings } from "../scoping/saveToSettings"
+import { deleteScope } from "../scoping/deleteScope"
+import { selectScope } from "../scoping/selectScope"
+import { getScopeConfig } from "../scoping/getScopeConfig"
+import { getScopes } from "../scoping/getScopes"
 import { RootScope } from "../extension"
 
 export const deleteScopeCommand = (

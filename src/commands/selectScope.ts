@@ -1,5 +1,7 @@
 import * as vscode from "vscode"
-import { getScopeConfig, getScopes, selectScope } from "../scope"
+import { selectScope } from "../scoping/selectScope"
+import { getScopeConfig } from "../scoping/getScopeConfig"
+import { getScopes } from "../scoping/getScopes"
 
 export const selectScopeCommand = (
 	context: vscode.ExtensionContext,

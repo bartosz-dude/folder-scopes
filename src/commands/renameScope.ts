@@ -1,10 +1,8 @@
-import {
-	getScopes,
-	scopeExist,
-	getScopeConfig,
-	renameScope,
-	saveToSettings,
-} from "../scope"
+import { saveToSettings } from "../scoping/saveToSettings"
+import { renameScope } from "../scoping/renameScope"
+import { getScopeConfig } from "../scoping/getScopeConfig"
+import { getScopes } from "../scoping/getScopes"
+import { scopeExist } from "../scoping/scopeExist"
 import * as vscode from "vscode"
 
 export const renameScopeCommand = (

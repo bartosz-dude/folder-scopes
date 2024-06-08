@@ -1,10 +1,8 @@
 import * as vscode from "vscode"
-import {
-	getScopeConfig,
-	parseScopeUri,
-	saveToSettings,
-	scopeFolder,
-} from "../scope"
+import { saveToSettings } from "../scoping/saveToSettings"
+import { getScopeConfig } from "../scoping/getScopeConfig"
+import { parseScopeUri } from "../scoping/parseScopeUri"
+import { scopeFolder } from "../scoping/scopeFolder"
 import { RootScope } from "../extension"
 
 export const scopeFolderCommand = (context: vscode.ExtensionContext) =>
