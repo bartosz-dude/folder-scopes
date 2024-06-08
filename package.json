@@ -57,7 +57,7 @@
 			},
 			{
 				"command": "folder-scopes.revealFiles",
-				"title": "Reveal Files",
+				"title": "Reveal Hidden Files",
 				"category": "Folder Scopes"
 			},
 			{
