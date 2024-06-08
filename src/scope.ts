@@ -441,7 +441,14 @@ export function saveToSettings(context: vscode.ExtensionContext) {
 
 	const extensionSettings = vscode.workspace.getConfiguration("folder-scopes")
 
-	extensionSettings.update("scopes", scopes)
+	const filteredScopes = Object.entries(scopes).filter(
+		(v) => v[0] !== RootScope
+	)
+	const filteredScopesObject = Object.fromEntries(filteredScopes)
+
+	filteredScopesObject[RootScope] = {}
+
+	extensionSettings.update("scopes", filteredScopesObject)
 }
 
 export function loadFromSettings(context: vscode.ExtensionContext) {
@@ -449,6 +456,14 @@ export function loadFromSettings(context: vscode.ExtensionContext) {
 
 	const extensionSettings = vscode.workspace.getConfiguration("folder-scopes")
 
-	const scopesFromSettings = extensionSettings.get("scopes")
-	workspaceState.update("scopes", scopesFromSettings)
+	const scopesFromSettings = extensionSettings.get(
+		"scopes"
+	) as FileScopesWorkspaceState["scopes"]
+
+	const filteredScopes = Object.entries(scopesFromSettings).filter(
+		(v) => v[0] !== RootScope
+	)
+	const filteredScopesObject = Object.fromEntries(filteredScopes)
+
+	workspaceState.update("scopes", filteredScopesObject)
 }
