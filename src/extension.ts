@@ -13,6 +13,7 @@ import { setScopeConfig } from "./scoping/setScopeConfig"
 import { getScopeConfig } from "./scoping/getScopeConfig"
 import { scopeExist } from "./scoping/scopeExist"
 import { createScope } from "./scoping/createScope"
+import { revealFilesCommand } from "./commands/revealFiles"
 
 export interface FileScopesWorkspaceState {
 	user: {
@@ -94,7 +95,7 @@ export function activate(context: vscode.ExtensionContext) {
 		hideFileCommand(context),
 		hideFolderCommand(context),
 		unscopeCommand(context),
-		unscopeCommand(context),
+		revealFilesCommand(context),
 		renameScopeCommand(context, scopeLabel)
 	)
 }

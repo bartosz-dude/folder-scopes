@@ -4,7 +4,7 @@ import { saveToSettings } from "../scoping/saveToSettings"
 import { getScopeConfig } from "../scoping/getScopeConfig"
 import { revealFiles } from "../scoping/revealFiles"
 
-export const unscopeCommand = (context: vscode.ExtensionContext) =>
+export const revealFilesCommand = (context: vscode.ExtensionContext) =>
 	vscode.commands.registerCommand(
 		"folder-scopes.revealFiles",
 		(...commandArgs) => {
