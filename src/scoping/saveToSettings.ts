@@ -14,7 +14,5 @@ export function saveToSettings(context: vscode.ExtensionContext) {
 	)
 	const filteredScopesObject = Object.fromEntries(filteredScopes)
 
-	filteredScopesObject[RootScope] = {}
-
 	extensionSettings.update("scopes", filteredScopesObject)
 }

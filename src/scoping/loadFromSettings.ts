@@ -16,5 +16,7 @@ export function loadFromSettings(context: vscode.ExtensionContext) {
 	)
 	const filteredScopesObject = Object.fromEntries(filteredScopes)
 
+	filteredScopesObject[RootScope] = {}
+
 	workspaceState.update("scopes", filteredScopesObject)
 }
