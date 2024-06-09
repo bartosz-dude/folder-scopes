@@ -22,8 +22,8 @@ export interface FileScopesWorkspaceState {
 	scopes: {
 		[scopeName: string]: {
 			[workspaceFolder: string]: {
-				folderPath?: string
-				excludedFilePaths?: string[]
+				scopedFolderPath?: string
+				excludedPaths?: string[]
 			}
 		}
 	}

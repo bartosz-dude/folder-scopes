@@ -15,11 +15,14 @@ export function generateExcludePaths(
 		return []
 	}
 
-	const folderPath = workspaceFolderScope?.folderPath?.replace(/^\//, "")
+	const folderPath = workspaceFolderScope?.scopedFolderPath?.replace(
+		/^\//,
+		""
+	)
 
 	const pathFragments = folderPath?.split("/") ?? []
 
-	const filePaths = workspaceFolderScope.excludedFilePaths?.map((v) =>
+	const filePaths = workspaceFolderScope.excludedPaths?.map((v) =>
 		v.replace(/^\//, "")
 	)
 	const excludePaths: string[] = [...(filePaths ?? [])]

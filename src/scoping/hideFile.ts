@@ -22,7 +22,7 @@ export function hideFile(
 		folderPath: "",
 		...curretWorkspaceFolderScope,
 		excludedFilePaths: [
-			...(curretWorkspaceFolderScope.excludedFilePaths ?? []),
+			...(curretWorkspaceFolderScope.excludedPaths ?? []),
 			scope.filePath,
 		],
 		// name: getScopeConfig(context)!.currentScope,

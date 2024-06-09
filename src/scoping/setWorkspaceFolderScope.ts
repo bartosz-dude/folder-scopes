@@ -20,8 +20,7 @@ export function setWorkspaceFolderScope(
 		currentScope &&
 		Object.keys(currentScope).includes(scope.workspaceFolder)
 	) {
-		excludedFilePaths =
-			currentScope[scope.workspaceFolder].excludedFilePaths
+		excludedFilePaths = currentScope[scope.workspaceFolder].excludedPaths
 	}
 
 	if (scope.excludedFilePaths) {
@@ -31,8 +30,8 @@ export function setWorkspaceFolderScope(
 	const updatedWorkspaceScopes: FileScopesWorkspaceState["scopes"][string] = {
 		...currentScope,
 		[scope.workspaceFolder]: {
-			folderPath: scope.folderPath,
-			excludedFilePaths: excludedFilePaths,
+			scopedFolderPath: scope.folderPath,
+			excludedPaths: excludedFilePaths,
 		},
 	}
 
