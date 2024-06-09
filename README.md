@@ -24,6 +24,7 @@ Scope Visual Studio Code file tree in a similar way to IntelliJ IDEA Scopes.
 - Scope file view to a specific folder
 - Hide files and folders in a scope
 - `Root` scope allows you to always see unscoped file view
+- each root in multi-root workspace has its own scoping and file hiding
 - Saves defined scopes in `settings.json` in `.vscode` to work with source control
 
 ## How to use
@@ -47,7 +48,6 @@ File with its path will show up in file explorer as long as its editor is visibl
 ## Known Issues
 
 - `"file.exclude"` setting in `.vscode` folder will be overwritten
-- doesn't work with multiple workspace folders
 
 ## Support
 
