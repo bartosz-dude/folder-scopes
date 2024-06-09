@@ -4,6 +4,7 @@
 	"displayName": "Folder Scopes",
 	"description": "Create scopes to show only the folder you want and hide irrelevant files to the scope in it",
 	"version": "1.0.0",
+	"license": "SEE LICENSE IN LICENSE.txt",
 	"funding": {
 		"type": "ko-fi",
 		"url": "https://ko-fi.com/bartoszdude"
@@ -11,6 +12,9 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/bartosz-dude/folder-scopes"
+	},
+	"bugs": {
+		"url": "https://github.com/bartosz-dude/folder-scopes/issues"
 	},
 	"pricing": "Free",
 	"author": {

@@ -5,16 +5,16 @@ Scope Visual Studio Code file tree in a similar way to IntelliJ IDEA Scopes.
 ## Overview
 
 - Create scopes to show ony specific folder
-![Create a scope and scope a folder](images/createScope.gif)
+![Create a scope and scope a folder](https://raw.githubusercontent.com/bartosz-dude/folder-scopes/main/images/createScope.gif?token=GHSAT0AAAAAACRIFC55TW4NWD724GQ6EWHSZTFZTOA)
 
 - Hide unwanted files and folders in a scope
-![Hide files and folders](images/hideItems.gif)
+![Hide files and folders](https://raw.githubusercontent.com/bartosz-dude/folder-scopes/main/images/hideItems.gif?token=GHSAT0AAAAAACRIFC55KHHZAB7E7E2RRKQMZTFZTVA)
 
 - Reveal again files and folders
-![Show hidden files and folders](images/showHidden.gif)
+![Show hidden files and folders](https://raw.githubusercontent.com/bartosz-dude/folder-scopes/main/images/showHidden.gif?token=GHSAT0AAAAAACRIFC55SILAHNYT4ZRYE7R2ZTFZT4Q)
 
 - Switch between multiple scopes
-![Switch between multiple scopes](images/switchScopes.gif)
+![Switch between multiple scopes](https://raw.githubusercontent.com/bartosz-dude/folder-scopes/main/images/switchScopes.gif?token=GHSAT0AAAAAACRIFC54XINFFOYZRYWUOPW2ZTFZUKA)
 
 ## Features
 
@@ -46,3 +46,9 @@ File with its path will show up in file explorer as long as its editor is visibl
 ## Known Issues
 
 - `"file.exclude"` setting in `.vscode` folder will be overwritten
+
+## Support
+
+You can support me on [ko-fi](https://ko-fi.com/bartoszdude)
+
+<a href='https://ko-fi.com/E1E5Z3TEO' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
