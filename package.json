@@ -131,11 +131,11 @@
 							"type": "object",
 							"description": "Workspace folder name",
 							"properties": {
-								"folderPath": {
+								"scopedFolderPath": {
 									"type": "string",
 									"description": "Path starting from the workspace folder"
 								},
-								"excludedFilePaths": {
+								"excludedPaths": {
 									"type": "array",
 									"items": {
 										"type": "string",
