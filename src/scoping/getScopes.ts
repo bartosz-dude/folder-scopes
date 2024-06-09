@@ -11,7 +11,9 @@ export function getScopes(context: vscode.ExtensionContext) {
 	const scopes =
 		workspaceState.get<FileScopesWorkspaceState["scopes"]>("scopes")
 
-	if (scopes) return Object.keys(scopes)
+	if (scopes) {
+		return Object.keys(scopes)
+	}
 
 	return []
 }

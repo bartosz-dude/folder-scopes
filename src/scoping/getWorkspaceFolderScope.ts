@@ -6,6 +6,7 @@ export function getWorkspaceFolderScope(
 	scope: { workspaceFolder: string; name: string }
 ) {
 	const scopeWorkspaceFolders = getScope(context, scope)
-	if (scopeWorkspaceFolders)
+	if (scopeWorkspaceFolders) {
 		return scopeWorkspaceFolders[scope.workspaceFolder]
+	}
 }

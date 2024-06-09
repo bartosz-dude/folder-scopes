@@ -8,7 +8,9 @@ export function renameScope(
 	scopeName: string,
 	newScopeName: string
 ) {
-	if (scopeName === RootScope) return
+	if (scopeName === RootScope) {
+		return
+	}
 
 	const workspaceState = context.workspaceState
 	const scopes =

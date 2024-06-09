@@ -6,7 +6,9 @@ export function deleteScope(
 	context: vscode.ExtensionContext,
 	scopeName: string
 ) {
-	if (scopeName === RootScope) return
+	if (scopeName === RootScope) {
+		return
+	}
 
 	const workspaceState = context.workspaceState
 	const scopes =

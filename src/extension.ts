@@ -40,8 +40,9 @@ export function activate(context: vscode.ExtensionContext) {
 		...getScopeConfig(context),
 	})
 
-	if (!scopeExist(context, { name: RootScope }))
+	if (!scopeExist(context, { name: RootScope })) {
 		createScope(context, { name: RootScope })
+	}
 	//
 
 	// Status bar current scope label init

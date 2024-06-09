@@ -3,7 +3,7 @@ export function generatePattern(fragment: string) {
 	const patternFragments = []
 
 	splitFragment.forEach((v, i, arr) => {
-		if (i == splitFragment.length - 1) {
+		if (i === splitFragment.length - 1) {
 			const prefix = arr.slice(0, i).join("")
 			patternFragments.push(`${prefix}[!${v}]*`)
 			return

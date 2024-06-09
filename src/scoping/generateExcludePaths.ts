@@ -25,9 +25,11 @@ export function generateExcludePaths(
 	const excludePaths: string[] = [...(filePaths ?? [])]
 
 	pathFragments.forEach((v, i, arr) => {
-		if (i == 0 && v === "") return
+		if (i === 0 && v === "") {
+			return
+		}
 
-		if (i == 0) {
+		if (i === 0) {
 			const pattern = generatePattern(v)
 			excludePaths.push(pattern)
 			// excludePaths.push(`${v}?*`)
@@ -36,7 +38,9 @@ export function generateExcludePaths(
 		}
 
 		function genPath(index = i): string {
-			if (index - 1 < 0) return ""
+			if (index - 1 < 0) {
+				return ""
+			}
 
 			return `${genPath(index - 1)}${arr[index - 1]}/`
 		}
