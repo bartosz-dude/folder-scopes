@@ -9,7 +9,9 @@ export function setScopeConfig(
 	const savedConfig: Partial<FileScopesWorkspaceState["user"]> =
 		workspaceState.get<FileScopesWorkspaceState["user"]>("user") ?? {}
 
-	const newConfig = {
+	const newConfig: FileScopesWorkspaceState["user"] = {
+		currentScope: "Root",
+		recentScopes: [{ name: "Root", workspaceFolders: {} }],
 		...savedConfig,
 		...config,
 	}

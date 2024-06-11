@@ -21,22 +21,30 @@ export function updateFileExcluding(context: vscode.ExtensionContext) {
 				workspaceFolder
 			)
 
-			// const currentExclude = workspaceFolderFiles.get(
+			// const workspaceExcludeConfig = workspaceFolderFiles.inspect(
 			// 	"exclude"
-			// ) as Record<string, true>
-			workspaceFolderFiles.update("exclude", {
-				...pathsToExcludeObj,
-				// ...currentExclude,
-			})
+			// )?.workspaceValue as Record<string, boolean>
 
-			// const revealFolderPath = getWorkspaceFolderScope(context, {
-			// 	workspaceFolder: workspaceFolder.name,
-			// 	name: getScopeConfig(context)?.currentScope!,
-			// })?.folderPath!
-			// const revealFolderUri = workspaceFolder.uri.with({
-			// 	path: revealFolderPath,
-			// })
-			// const a = vscode.workspace.asRelativePath("**/" + revealFolderPath)
+			// const a = getScopeConfig(context)
+			// const previousPathsToExclude = generateExcludePaths(
+			// 	getScopeConfig(context)?.recentScopes.at(-0)?.workspaceFolders[
+			// 		workspaceFolder.name
+			// 	]!
+			// )
+
+			// const workspaceExcludeConfigFiltered = Object.keys(
+			// 	workspaceExcludeConfig
+			// ).filter(
+			// 	(existingKey) => !previousPathsToExclude.includes(existingKey)
+			// )
+			// const nonExtensionExcludedPaths = Object.fromEntries(
+			// 	workspaceExcludeConfigFiltered.map((v) => [v, true])
+			// )
+
+			workspaceFolderFiles.update("exclude", {
+				// ...nonExtensionExcludedPaths,
+				...pathsToExcludeObj,
+			})
 		})
 	}
 }

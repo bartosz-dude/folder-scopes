@@ -18,6 +18,15 @@ import { revealFilesCommand } from "./commands/revealFiles"
 export interface FileScopesWorkspaceState {
 	user: {
 		currentScope: string
+		recentScopes: {
+			name: string
+			workspaceFolders: {
+				[workspaceFolder: string]: {
+					scopedFolderPath?: string
+					excludedPaths?: string[]
+				}
+			}
+		}[]
 	}
 	scopes: {
 		[scopeName: string]: {
@@ -32,6 +41,7 @@ export interface FileScopesWorkspaceState {
 export const RootScope = "Root"
 
 export function activate(context: vscode.ExtensionContext) {
+	// context.workspaceState.update("user", undefined)
 	loadFromSettings(context)
 
 	// inits scopes when opening a workspace

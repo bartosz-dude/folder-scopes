@@ -1,15 +1,38 @@
 import * as vscode from "vscode"
 import { getWorkspaceFolderScope } from "./getWorkspaceFolderScope"
 import { generatePattern } from "./generatePattern"
+import { FileScopesWorkspaceState } from "../extension"
 
+type WorkspaceFolderScope = FileScopesWorkspaceState["scopes"][string][string]
+
+export function generateExcludePaths(
+	workspaceScope: WorkspaceFolderScope
+): string[]
 export function generateExcludePaths(
 	context: vscode.ExtensionContext,
 	scope: {
 		workspaceFolder: string
 		name: string
 	}
-) {
-	const workspaceFolderScope = getWorkspaceFolderScope(context, scope)
+): string[]
+export function generateExcludePaths(
+	contextInternal: vscode.ExtensionContext | WorkspaceFolderScope,
+	scopeInternal?: {
+		workspaceFolder: string
+		name: string
+	}
+): string[] {
+	let workspaceFolderScope: WorkspaceFolderScope | undefined
+
+	if (arguments.length === 1) {
+		const workspaceScope = contextInternal as WorkspaceFolderScope
+		workspaceFolderScope = workspaceScope
+	} else {
+		const context = contextInternal as vscode.ExtensionContext
+		const scope = scopeInternal!
+
+		workspaceFolderScope = getWorkspaceFolderScope(context, scope)
+	}
 
 	if (!workspaceFolderScope) {
 		return []
