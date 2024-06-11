@@ -18,8 +18,7 @@ export function revealFiles(
 	setWorkspaceFolderScope(context, {
 		workspaceFolder: scope.workspaceFolder,
 		name: getScopeConfig(context)!.currentScope,
-		folderPath: "",
-		...curretWorkspaceFolderScope,
+		folderPath: curretWorkspaceFolderScope.scopedFolderPath ?? "",
 		excludedFilePaths: [],
 	})
 	updateFileExcluding(context)

@@ -19,8 +19,7 @@ export function hideFile(
 	setWorkspaceFolderScope(context, {
 		workspaceFolder: scope.workspaceFolder,
 		name: getScopeConfig(context)!.currentScope,
-		folderPath: "",
-		...curretWorkspaceFolderScope,
+		folderPath: curretWorkspaceFolderScope.scopedFolderPath ?? "",
 		excludedFilePaths: [
 			...(curretWorkspaceFolderScope.excludedPaths ?? []),
 			scope.filePath,

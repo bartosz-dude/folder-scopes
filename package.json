@@ -3,7 +3,7 @@
 	"publisher": "bartosz-dude",
 	"displayName": "Folder Scopes",
 	"description": "Create scopes to show only the folder you want and hide irrelevant files to the scope in it",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "SEE LICENSE IN LICENSE.txt",
 	"funding": {
 		"type": "ko-fi",
