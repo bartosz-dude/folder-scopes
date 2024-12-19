@@ -7,16 +7,16 @@ Scope Visual Studio Code file tree in a similar way to IntelliJ IDEA Scopes.
 ## Overview
 
 - Create scopes to show ony specific folder
-![Create a scope and scope a folder](https://raw.githubusercontent.com/bartosz-dude/folder-scopes/main/images/createScope.gif?token=GHSAT0AAAAAACRIFC55TW4NWD724GQ6EWHSZTFZTOA)
+![Create a scope and scope a folder](https://raw.githubusercontent.com/bartosz-dude/folder-scopes/main/images/createScope.gif)
 
 - Hide unwanted files and folders in a scope
-![Hide files and folders](https://raw.githubusercontent.com/bartosz-dude/folder-scopes/main/images/hideItems.gif?token=GHSAT0AAAAAACRIFC55KHHZAB7E7E2RRKQMZTFZTVA)
+![Hide files and folders](https://raw.githubusercontent.com/bartosz-dude/folder-scopes/main/images/hideItems.gif)
 
 - Reveal again files and folders
-![Show hidden files and folders](https://raw.githubusercontent.com/bartosz-dude/folder-scopes/main/images/showHidden.gif?token=GHSAT0AAAAAACRIFC55SILAHNYT4ZRYE7R2ZTFZT4Q)
+![Show hidden files and folders](https://raw.githubusercontent.com/bartosz-dude/folder-scopes/main/images/showHidden.gif)
 
 - Switch between multiple scopes
-![Switch between multiple scopes](https://raw.githubusercontent.com/bartosz-dude/folder-scopes/main/images/switchScopes.gif?token=GHSAT0AAAAAACRIFC54XINFFOYZRYWUOPW2ZTFZUKA)
+![Switch between multiple scopes](https://raw.githubusercontent.com/bartosz-dude/folder-scopes/main/images/switchScopes.gif)
 
 ## Features
 
